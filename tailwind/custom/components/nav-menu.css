@@ -1,11 +1,17 @@
+#masthead{
+  @apply shadow mb-2 px-2 py-4 bg-secondary-50 text-secondary-800;
+}
+
 .menu-side-bar-container {
   @apply flex justify-between items-center bg-secondary-50 text-secondary-800;
 }
 
-.menu {
-  @apply flex flex-row text-sm z-50 ;
+#site-navigation{
+  @apply mt-4 md:mt-0;
 }
-
+.menu {
+  @apply hidden text-sm z-50 flex-col md:flex md:flex-row;
+}
 .menu li {
   @apply border-y-2 border-secondary-50;
 }
@@ -71,4 +77,9 @@ ul.sub-menu > li > a:after{
 li:hover > a + .sub-menu {
     opacity: 1;
     transform: scaleY(1);
+}
+
+/*style for menu toggle*/
+.menu_toggle{
+  @apply sm:hidden mb-4;
 }
