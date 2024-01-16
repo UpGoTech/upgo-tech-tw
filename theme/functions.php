@@ -80,7 +80,7 @@ if ( ! function_exists( 'upgo_tech_tw_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => __( 'Primary', 'upgo-tech-tw' ),
+				'primary-menu' => __( 'Primary', 'upgo-tech-tw' ),
 				'menu-2' => __( 'Footer Menu', 'upgo-tech-tw' ),
 			)
 		);

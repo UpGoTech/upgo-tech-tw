@@ -15,7 +15,7 @@
 		<?php
 		if ( is_front_page() ) :
 			?>
-			<h1><?php bloginfo( 'name' ); ?></h1>
+			<h1><?php //bloginfo( 'name' ); ?></h1>
 			<?php
 		else :
 			?>
@@ -32,7 +32,7 @@
 	
 	<div class="menu-side-bar-container">
 		<nav id="site-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'upgo-tech-tw' ); ?>">
-			<button aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'upgo-tech-tw' ); ?></button>
+			<!-- <button aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'upgo-tech-tw' ); ?></button> -->
 
 			<?php
 			// wp_nav_menu(
@@ -45,8 +45,8 @@
 
 			wp_nav_menu( 
 				array( 
-					'theme_location' => 'primary-menu', 
-					'container_class'      => 'menu-side-bar-container', 
+					'theme_location' => 'menu-1', 
+					'container_class' => 'menu-side-bar-container', 
 				) 
 			);
 			
