@@ -8,3 +8,11 @@
  * For esbuild documentation, please see:
  * https://esbuild.github.io/
  */
+
+// for menu open and close
+document.getElementById('hamburgerIcon').addEventListener('click', function(){
+   var menu = document.getElementById('menu-header-menu');
+   menu.classList.toggle('menu-open');   
+});
+
+//For sub menu list

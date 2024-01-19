@@ -1,16 +1,13 @@
-#masthead{
-  @apply shadow mb-2 px-2 py-4 bg-secondary-50 text-secondary-800;
-}
-
 .menu-side-bar-container {
-  @apply flex justify-between items-center bg-secondary-50 text-secondary-800;
-}
-
-#site-navigation{
-  @apply mt-4 md:mt-0;
+  @apply flex justify-between items-center bg-secondary-50 text-secondary-800 ;
 }
 .menu {
-  @apply hidden text-sm z-50 flex-col md:flex md:flex-row;
+  @apply bg-secondary-50 flex text-sm z-50 flex-col h-screen w-64 absolute top-0 left-[-300px] md:mt-0 md:flex-row md:h-auto md:w-auto md:left-0 md:relative;  
+}
+
+.menu-open{
+  @apply left-0;
+  transition: left 0.3s ease;
 }
 .menu li {
   @apply border-y-2 border-secondary-50;
@@ -58,14 +55,13 @@ li:hover.menu-item-has-children > a:after {
 }
 
 .sub-menu > li:hover {
-  @apply text-secondary-800 bg-gray-200
+  @apply text-secondary-800 bg-gray-200;
 }
 
 .sub-menu .sub-menu {
   left: 100%;
   top: -4px;
-
-} 
+ } 
 
 ul.sub-menu > li > a:after{
   rotate: -90deg;
@@ -80,6 +76,22 @@ li:hover > a + .sub-menu {
 }
 
 /*style for menu toggle*/
-.menu_toggle{
-  @apply sm:hidden mb-4;
+
+.hamburger {
+  @apply cursor-pointer flex flex-col w-7 h-5 justify-between md:hidden; 
+}
+
+.line {
+  @apply w-full h-[1px] bg-secondary-800 transition-all duration-300 ease-in-out;
+}
+.closed .line:nth-child(1) {
+  transform: rotate(-45deg) translateY(12px);
+}
+
+.closed .line:nth-child(2) {
+  transform: scaleX(0);
+}
+
+.closed .line:nth-child(3) {
+  transform: rotate(45deg) translateY(-12px);
 }
